@@ -1,6 +1,14 @@
-/*Con el BD PUBS crear un Ìndice lÛgico que permita ver a 
+--=======================================================
+--Curso:SQL 3 
+--Tema:Examen Final
+--Alumno:Soto S,Eden Persi
+--Profesor:Julio Enrique Flores Manco
+
+--=======================================================
+
+/*Con el BD PUBS crear un √≠ndice l√≥gico que permita ver a 
 los libros ordenados por editorial y por tipo.
-SoluciÛn
+Soluci√≥n
 */
 use pubs
 go
@@ -25,7 +33,7 @@ order by pub_id,type
 go
 
 /*Con el BD Northwind crear un SP que muestre los cinco 
-productos m·s vendidos en un intervalo de fechas determinado*/
+productos m√°s vendidos en un intervalo de fechas determinado*/
 
 use Northwind
 go
@@ -71,7 +79,7 @@ go
 
 
 /*Crear un store procedure en MarketPeru que al ingresar un 
-detalle de compra actualice en forma autom·tica el stock del 
+detalle de compra actualice en forma autom√°tica el stock del 
 producto comprado. 
 Para probar el store procedure debe ingresar primero una nueva
 compra, y luego ingresar un detalle de la nueva compra utilizando 
@@ -117,7 +125,7 @@ select
 from PRODUCTO where IdProducto = @idproducto
 if @desc = 1
 	begin
-		print 'EL PRODUCTO EST¡ DISCONTINUADO'
+		print 'EL PRODUCTO EST√Å DISCONTINUADO'
 		return 4
 	end
 begin tran
@@ -160,7 +168,7 @@ go
 select * from PRODUCTO where IdProducto=1 
 select * from ORDEN_DETALLE where IdOrden=19
 go
--- Ahora el stock esta en 250( se le aumentÛ 60 )
+-- Ahora el stock esta en 250( se le aument√≥ 60 )
 
 -- Con un Producto descontinuado
 select * from PRODUCTO where IdProducto=138  
@@ -224,10 +232,10 @@ GO
 /*En la bd Northwind crear un Trigger que al momento de 
 ingresar un Detalle de pedido (Tabla Order Details) 
 verifique si el stock (UnitsInStock) del Producto vendido
-(de la Tabla de Productos) despuÈs de realizar la venta 
-ser· menor o igual al stock mÌnimo establecido (ReorderLevel); 
-si asÌ fuera presentar un mensaje de advertencia que el  
-stock se encuentra por debajo del mÌnimo establecido.
+(de la Tabla de Productos) despu√©s de realizar la venta 
+ser√° menor o igual al stock m√≠nimo establecido (ReorderLevel); 
+si as√≠ fuera presentar un mensaje de advertencia que el  
+stock se encuentra por debajo del m√≠nimo establecido.
 */
 
 use Northwind
@@ -314,7 +322,7 @@ go
 --el stock bajo de 39 a 29 por el pedido de 10 unidades
 
 
---Pedido m·s alto del stock
+--Pedido m√°s alto del stock
 
 --2	Chang	1	1	24 - 12 oz bottles	19.00	17	40	25	0
 insert into [Order Details] values(11079,2,18,60,0)
